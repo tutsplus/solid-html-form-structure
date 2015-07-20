@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Forms</title>
+        <style>
+            html, body {
+                font-family: Helvetica, Arial, sans-serif;
+            }
+            * { box-sizing: border-box; }
+            #myform {
+                width: 700px;
+                margin: 0 auto;
+            }
+            
+            #myform fieldset {
+                border: 1px solid #bbb;
+                background-color: #f8f8f8;
+                border-radius: 8px;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            
+            #myform label, #myform input, #myform select {
+                display: block;
+            }
+            
+            #myform input, #myform select, #myform textarea {
+                margin-bottom: 20px;
+                padding: 6px;
+                width: 350px;
+            }
+            
+            #terms {
+                float: left;
+                width: auto !important;
+            }
+            
+            input[name="referrer"] {
+                float: left;
+                margin-right: 10px;
+                width: auto !important;
+                clear: left;
+            }
+            
+            .lbl-referrer {
+                float: left;
+            }
+            
+            h4 {
+                clear: left;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="myform">
+           <fieldset>
+               <legend>Personal Information</legend>
+               <!-- Personal Info -->
+               <input id="firstname" name="firstname"
+                   type="text" placeholder="First Name"/>
+
+               <input id="lastname" name="lastname" type="text"
+                   placeholder="Last Name" />
+
+               <input id="email" name="email" type="email"
+                   placeholder="email@address.com"/>
+           </fieldset>
+
+           <fieldset>
+               <legend>Login Information</legend>
+               <!-- Login Info -->
+               <label for="username">Username:</label>
+               <input id="username" name="username" type="text"/>
+
+               <label for="password">Password:</label>
+               <input id="password" name="password" type="password"/>
+
+               <label for="passwordconfirm">Confirm Password:</label>
+               <input id="passwordconfirm" name="passwordconfirm" type="password"/>
+           </fieldset>
+
+           <fieldset>
+               <legend>Address</legend>
+               <!-- Address -->
+               <label for="address1">Street Number and Name:</label>
+               <input id="address1" name="address1" type="text"/>
+
+               <label for="address2">Apartment:</label>
+               <input id="address2" name="address2" type="text"/>
+
+               <label for="city">City:</label>
+               <input id="city" name="city" type="text"/>
+
+               <label for="state">State:</label>
+               <select name="state" id="state">
+                   <option value="TX">Texas</option>
+                   <option value="AK">Alaska</option>
+                   <option value="CO">Colorado</option>
+                   <option value="OK">Oklahoma</option>
+               </select>
+
+               <label for="zip">Zip Code:</label>
+               <input id="zip" name="zip" type="text"/>
+           </fieldset>
+           
+           <!-- Referrer -->
+           <h4>How did you find us?</h4>
+           <input type="radio" name="referrer" id="search-engine"/>
+           <label for="search-engine" class="lbl-referrer">Search Engine</label>
+           
+           <input type="radio" name="referrer" id="other"/>
+           <label for="other" class="lbl-referrer">Other</label>
+           
+           <!-- Terms -->
+           <h4>Terms &amp; Conditions</h4>
+           <input type="checkbox" name="terms" id="terms"/>
+           <label for="terms">I accept the Terms and Conditions</label>
+           
+           <br style="clear: both;"/>
+
+           <label for="message">Enter a short message:</label>
+           <textarea id="message" name="message" rows="6" cols="50"></textarea>
+           <div style="clear: both;"></div>
+           
+            <input type="submit" name="submit" id="submit" value="Submit Form"/>
+        </form>
+    </body>
+</html>
